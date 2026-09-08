@@ -1,0 +1,6 @@
+.env
+.vscode
+.agents
+logs
+__pycache__
+data/stocks
