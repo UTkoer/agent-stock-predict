@@ -1,0 +1,20 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "DOWN",
+    "confidence": 0.55,
+    "reasoning": "The stock has been in a clear downtrend since the sharp 6% drop on 2026‑08‑20, falling from 52.87 to 45.96 over the last 15 days.  The most recent three days show only marginal gains (45.57 → 45.96 → 46.02) with very weak momentum (0.13% on 2026‑09‑04) and a steady decline in volume (≈490k).  The price is now hovering just above the 45.5‑46.0 support zone, with the 47.6 level acting as the nearest resistance.  Given the lack of buying pressure, the failure to push above 47.6, and the recent consolidation, the strongest catalyst for a further decline is the continued inability to break that resistance.  The invalidation level is 47.6; a close above this would signal a reversal.  The key downside risk is a break below the 45.5 support, which would open the door to a deeper pullback.  With these factors, a short‑term down move on 2026‑09‑07 is the most likely outcome, but the conviction is moderate due to the weak momentum and low volume.",
+    "actual": "UP",
+    "correct": false,
+    "created_at": "2026-09-07 15:13:41"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "DOWN",
+    "confidence": 0.68,
+    "reasoning": "整体下跌趋势未被突破，关键支撑位未被验证，风险高。",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:23:51"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "UP",
+    "confidence": 0.63,
+    "reasoning": "601166 staged a decisive recovery from the 08/28 capitulation flush (-3.22% on 2.41M volume, low 17.43), building a clean sequence of higher lows (17.44→17.50→17.84→17.81→17.91) and rising closes into 18.22 on 09/04. The latest session closed at its high (18.22 vs 18.23 high) on expanding volume (993k vs 709k/938k on the prior two quiet consolidation days), reclaiming the 18.0 level and signaling buyers are absorbing thin supply after two low-volume pullback days. Momentum, higher-low structure, and the strong close near the highs favor continued upside. Strongest catalyst is the post-flush momentum re-acceleration breaking above the 17.9-18.0 shelf; a close above 18.23 resistance opens the path toward the 18.42 rejection high. Invalidation: a close back below 17.90 breaks the breakout/consolidation shelf and negates the recovery. Key downside risk: rejection at the twice-tested 18.23-18.42 resistance zone, which could fade the move back toward 17.5-17.6. Confidence is set at 0.63 (not higher) because price sits directly at a twice-rejected resistance band, capping conviction despite the bullish tape. Analysis only, not investment advice.",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-07 15:09:43"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "DOWN",
+    "confidence": 0.63,
+    "reasoning": "冲高18.34放量收阴现长上影滞涨反转，18.2-18.5压力五次测试未破，量价背离，短线看跌回踩18.0-17.84支撑。",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:21:30"
+  }
+]

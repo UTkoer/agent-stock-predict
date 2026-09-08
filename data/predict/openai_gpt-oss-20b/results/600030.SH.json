@@ -1,0 +1,20 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "UP",
+    "confidence": 0.75,
+    "reasoning": "The stock has been in a clear uptrend over the last 15 days, closing higher on 9‑04 at 27.99 after a series of bullish moves (27.54→27.93→27.99).  Volume has been strong on the most recent buying days (26‑27 and 4), indicating institutional support.  Momentum is positive: the 3‑day moving average of close prices is above the 5‑day average, and the 3‑day RSI (calculated from the last 3 days) is above 50.  The price is holding near the 27.93 high, which acts as a strong support level; a break below 27.5 would invalidate the bullish case.  The strongest catalyst is the surge in volume on 26‑27, suggesting new capital inflow.  The key downside risk is a sudden macro‑economic shock or negative company news that could trigger a sharp sell‑off, pushing the price below the 27.5 invalidation level.  Given the evidence, the conviction is high for an upward move on 9‑07, with a target near the recent high of 28.33 and a stop‑loss around 27.5.",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-07 15:15:10"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "DOWN",
+    "confidence": 0.55,
+    "reasoning": "价格接近上轨，成交量低于平均，未突破28.0阻力，故下跌概率高。",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:25:17"
+  }
+]

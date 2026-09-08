@@ -1,0 +1,5 @@
+{
+  "include": ["mcp", "test"],
+  "extraPaths": ["mcp"],
+  "pythonVersion": "3.12"
+}

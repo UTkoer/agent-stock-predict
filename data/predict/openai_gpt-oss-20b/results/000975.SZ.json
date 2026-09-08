@@ -1,0 +1,20 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "DOWN",
+    "confidence": 0.58,
+    "reasoning": "The price action over the last five trading days shows a clear reversal from a brief up‑trend (26.35 → 26.64) to a sharp decline (26.64 → 26.25). 26.25 is the lowest close in the 15‑day window and sits just below the 3‑day (26.46) and 5‑day (26.44) moving averages, indicating that the short‑term trend is turning negative.  Volume has been falling (765k on 08‑31 to 416k on 09‑04), so the recent rally lacks conviction.  The strongest catalyst for a further decline is the break of the 26.3 support level; if the price falls below 26.20 it could test 25.80‑25.90.  The invalidation level for a bullish case is 26.30‑26.35; if the price holds above this, a rebound to 26.70‑26.80 is possible.  Given the evidence, a short‑term downward move is the most likely outcome. ",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-07 15:09:18"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "DOWN",
+    "confidence": 0.72,
+    "reasoning": "跌势持续，成交量回落，已突破关键阻力，缺乏上行动能。",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:20:57"
+  }
+]

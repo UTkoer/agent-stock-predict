@@ -1,0 +1,20 @@
+{
+
+    "rule_config": {
+        "predict_date": "auto",
+        "predict_stocks":"default_symbols",
+        "addtional_prompt": "default_prompt",
+        "lookback_days":30
+
+    },
+    "data_source": [
+        {
+            "name": "akshare",
+            "enabled": true
+        } ,
+        {
+            "name": "tushare",
+            "enabled": true
+        }
+    ]
+}

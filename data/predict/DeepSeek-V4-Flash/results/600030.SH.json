@@ -1,0 +1,20 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "DOWN",
+    "confidence": 0.6,
+    "reasoning": "Evidence: After a steady climb off the 27.04 base (Aug 20) into the 27.8-28.0 zone, price on the last session (20260904) gapped up to probe the 28.33 high but reversed to close at 27.99, essentially at the session low — a long upper-wick rejection candle printed on the heaviest volume of the whole window (1.39M), the largest of 15 days. This is distribution/absorption at a hard resistance ceiling (~28.0-28.33 has capped three straight sessions: 08.28 high 28.05, 09.01 high 28.08, 09.04 high 28.33), with the close failing to hold above 28.0. Strongest catalyst: high-volume failure at resistance following the 09.02 -1.96% shakeout — sellers are defending 28.3, and the weak close near the low signals follow-through lower toward the first support shelf 27.46-27.49 (09.02/09.03 lows) and then 27.0. Invalidation: a decisive close above 28.33 on strong volume would negate the bearish reversal and confirm breakout continuation. Key downside risk: a slide toward 27.46-27.5 support (~-1.8%); if that gives way, 27.0 is the next magnet. Momentum has stalled (flat 08.27-08.28, weak 08.31 close, failed 09.02), so the balance of evidence favors a lower open/close on 20260907. Confidence is moderate (0.6), not higher, because the uptrend off the Aug low is still intact and dip-buyers defended 27.5 on 09.03, so this is a tactical pullback call rather than a trend break. Analysis only, not investment advice.",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-07 15:13:58"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "UNKNOWN",
+    "confidence": null,
+    "reasoning": "{\"prediction\": \"DOWN\", \"confidence\": 0.62, \"reasoning\": \"多次上攻28元阻力未果，9/7高开低走收长上影阴线于日内低位，量能萎缩上行动能衰竭，短期看空回踩27.46-27.40支撑。\", \"report\": \"# 600030.SH技术分析报告\\n**分析日期：260907**  \\n**数据范围：260807-260907（22个交易日）**\\n\\n## 一、数据概览\\n\\n### 价格走势分析\\n- **最新收盘价**：27.67元（260907，跌1.14%）\\n- **22日价格区间**：27.00元（260819最低）—28.33元（260904最高）\\n- **价格位置**：处于区间中轨偏下，紧贴27.50元一带短期均衡位，距离区间上沿28.33元约2.4%\\n- **趋势特征**：整体呈27.00-28.33元宽幅箱体震荡，260826起反弹节奏逐级抬升，但260907高开低走破坏上行斜率，短线转入回落\\n### 成交量分析\\n- **平均成交量**：约106.0万手\\n- **最大成交量**：172.6万手（260826，当日大涨2.28%，反弹启动信号）\\n- **量价关系**：反弹段260826-260904量能持续放大配合上行，260907下跌日量能萎缩至96.8万手，为价跌量缩、上行承接不足特征\\n- **资金流向**：260826-260904放量吸筹迹象明显，但260907冲高28.13元后大幅回落并收阴，高位兑现抛压压制，短线资金转谨慎\\n\\n## 二、技术信号分析\\n\\n### 趋势分析\\n1. **短期趋势**：260826以来阶梯式上行在28.0-28.3元受阻，260907出现明显冲高回落，短期转为震荡下探格局\\n2. **关键价位**：\\n   - 支撑位：27.46元（260902低点，首要支撑）、27.00-27.15元（260819低点区，强支撑）\\n   - 阻力位：28.00-28.05元（前期收盘密集区）、28.13-28.33元（260904高点，强阻力）\\n3. **K线形态**：260907收高开低走、长上影的中阴线，实体吞没前日涨幅，属典型看跌反转形态，且收于全日最低价附近，抛压未尽\\n\\n### 量价关系深度分析\\n- **260826**：成交量172.6万手（区间最大），涨2.28%，放量长阳突破，量价齐升确立反弹\\n- **260827**：成交量135.4万手，涨0.58%，延续放量上行，多头占优\\n- **260901**：成交量115.1万手，涨0.79%，缩量上攻27.9-28.0元，上攻动能减弱\\n- **260902**：成交量103.0万手，跌1.96%，放量中阴回落至27.47元，多头遇阻\\n- **260904**：成交量139.3万手，涨0.47%，盘中冲高28.33元但收盘仅27.99元，放量长上影显示28.3元抛压沉重\\n- **260907**：成交量96.8万手，跌1.14%，缩量高开低走，上攻无量配合、回落反吞前日阳线，量价背离确认短期见顶信号\\n\\n### 技术指标解读\\n1. **动量指标**：260826-260904上行段动量逐步衰竭，260907收阴后短期动量转负，价格重心自28元上方下移\\n2. **支撑验证**：27.46元（260902低点）尚未跌破，构成首要防线；27.0-27.15元为箱体下沿强支撑\\n3. **阻力测试**：28.0-28.3元区域连续四次（260827/260901/260904/260907）上攻均告失败，阻力有效性已被反复确认，突破概率下降\\n\\n## 三、预测结论\\n\\n### 短期走势判断\\n**看涨理由：**\\n1. **技术突破**：尚无有效突破28.0-28.3元强阻力，突破失败\\n2. **量价健康**：近两日上攻缺乏量能、回落带量收阴，量价背离，健康度不足\\n3. **趋势形成**：K线收于日内低位且形成看跌吞没形态，短期上行趋势遭破坏\\n4. **空间存在**：若跌破27.46元支撑，下方27.0-27.15元尚有空间，但当前上攻理由匮乏\\n\\n### 风险因素\\n1. **宏观影响**：券商板块对市场成交与政策预期高度敏感，若情绪回暖或放量突破28.05元将推翻看空判断\\n2. **技术阻力**：27.46元一旦有效跌破，将打开向27.0-27.15元箱体下沿的回落空间\\n3. **市场情绪**：缩量阴跌或引发多头离场与高抛盘跟进，放大下行波动\\n\\n### 综合评估\\n基于技术分析，给出综合判断并列出关键信号：\\n- 28.0-28.3元阻力区四次上攻失败，突破无果，构成强压制\\n- 260907收长上影阴线且收于日内低位，看跌反转信号明确\\n- 反弹段量能放大而当前下跌日量缩，量价背离预示上行动能衰竭\\n- 首要支撑27.46元未破，下方27.0-27.15元构成强支撑，下行空间相对有限\\n\\n**预测方向**：看跌。预计260908低开或惯性下探，回踩27.40-27.46元支撑区；若失守27.40元，目标看27.15-27.00元。判断失效条件为放量收复并站稳28.05元上方（即突破该价位则看空逻辑失效、需止损）。主要风险为缩量阴跌演化为放量急跌至27.0元，以及政策面利好触发快速反包，故置信度控制在0.62。\\n\\n*本分析仅供参考，不构成投资建议。*\"",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:24:19"
+  }
+]

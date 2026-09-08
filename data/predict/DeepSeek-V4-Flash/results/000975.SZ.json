@@ -1,0 +1,21 @@
+[
+  {
+    "predict_date": "20260907",
+    "prediction": "DOWN",
+    "confidence": 0.63,
+    "reasoning": "Trend is clearly lower after the Aug-24 top (~30.28): closes have traced lower highs (27.40 -> 27.31 -> 26.48) and Sep-04 printed a fresh 15-day closing low of 26.25, breaking below the 26.35–26.64 consolidation floor. Strongest catalyst: a bearish failed-rebound — Sep-04 opened higher at 27.04, tagged 27.17, then got sold down to close near the session low (26.09) on a red candle that broke key support, confirming a lower-high/lower-low sequence with buyers absent. Momentum is negative and volume on down days (765k on Aug-31) exceeds up-day volume, showing distribution. Invalidation: a daily close back above ~27.3 (above the Sep-03/04 highs and reclaimed prior support) would negate the bearish structure and force a re-think. Key downside risk: price is just above the 26.0–26.1 shelf; a break opens the path to the Aug-31 low 25.40 and then the Sep-02 spike low 25.11, with extension risk if that floor cracks. Confidence is calibrated at 0.63 — not higher because volume on the breakdown day was modest (416k) and the stock is short-term oversold near a support shelf, but the balance of evidence favors continued downside for 20260907.",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-07 15:07:46"
+  },
+  {
+    "predict_date": "20260908",
+    "prediction": "DOWN",
+    "confidence": 0.68,
+    "reasoning": "高点30.28后回落约15%，跌破26.2-26.4平台，9/7地量阴线收25.8创新低，均线压制、反弹乏力，趋势向下。",
+    "actual": null,
+    "correct": null,
+    "created_at": "2026-09-07 18:19:31"
+  }
+]
+

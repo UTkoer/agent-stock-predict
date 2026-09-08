@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股票预测台</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="mark">◆</span><span>市场观测台</span></div><div class="top-actions"><span id="health" class="status">连接中</span><button id="themeBtn" class="theme-btn" type="button" aria-label="切换昼夜主题">☼</button></div></header>
+  <main class="shell">
+    <section class="hero deco"><p class="eyebrow">AGENT STOCK PREDICT · DAILY BRIEF</p><h1>数据驱动的市场判断</h1><p class="sub">集中查看模型预测、历史行情与工具状态。</p></section>
+    <section class="controls panel"><label>股票标的<select id="symbolSelect"></select></label><label>预测模型<select id="modelSelect"></select></label><label>预测日期<select id="dateSelect"></select></label><button id="refreshBtn" type="button">刷新数据</button></section>
+    <section class="layout">
+      <div class="primary">
+        <div class="section-head"><div><p class="eyebrow">CURRENT SIGNAL</p><h2>最新预测</h2></div><span id="coverage" class="muted">--</span></div>
+        <article id="predictionCard" class="prediction-card panel"><div class="empty">正在读取预测结果...</div></article>
+        <div class="section-head"><div><p class="eyebrow">PRICE HISTORY</p><h2>近期行情</h2></div></div>
+        <div class="table-wrap panel"><table><thead><tr><th>交易日</th><th>开盘</th><th>收盘</th><th>涨跌幅</th><th>成交量</th></tr></thead><tbody id="stockRows"></tbody></table></div>
+      </div>
+      <aside class="sidebar"><section class="panel side-block"><p class="eyebrow">MODELS</p><h3>可用模型</h3><ul id="modelList"></ul></section><section class="panel side-block"><p class="eyebrow">MCP TOOLS</p><h3>工具状态</h3><ul id="toolList"></ul></section><section class="panel side-block"><p class="eyebrow">PROMPT</p><h3>额外提示词</h3><p id="promptText" class="prompt">--</p></section></aside>
+    </section>
+  </main>
+  <script src="/js/app.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

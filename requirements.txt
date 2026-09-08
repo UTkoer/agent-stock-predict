@@ -1,0 +1,10 @@
+akshare
+tushare
+python-dotenv
+mcp
+langchain
+langchain-mcp-adapters
+langchain-openai
+langgraph
+fastapi
+uvicorn
