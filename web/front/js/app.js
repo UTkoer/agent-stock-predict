@@ -24,7 +24,8 @@ async function boot() {
     state.symbols = symbols.symbols;
     state.models = models.models;
     fillSelect('#symbolSelect', state.symbols.map((value) => ({ value, text: value })));
-    fillSelect('#modelSelect', [{ value: '', text: '全部模型' }, ...state.models.map((item) => ({ value: safeModel(item.name), text: item.name }))]);
+    fillSelect('#modelSelect', state.models.map((item) => ({ value: safeModel(item.name), text: item.name })));
+    if (state.models.length) $('#modelSelect').value = safeModel(state.models[0].name);
     $('#modelList').innerHTML = state.models.map((item) => `<li><span>${item.name}</span><span class="pill">${item.enabled ? 'ENABLED' : 'OFF'}</span></li>`).join('');
     $('#toolList').innerHTML = tools.tools.map((item) => `<li><span>${item.name}</span><span class="pill">${item.status}</span></li>`).join('');
     $('#promptText').textContent = prompt.default_prompt || '未配置';
