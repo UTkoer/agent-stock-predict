@@ -101,17 +101,70 @@ def latest_local_date(stock_code: str, predict_date: str) -> str:
     return max(dates)
 
 
+def _prediction_from_object(value: Any, fallback: str) -> tuple[str, float | None, str, str] | None:
+    """Convert a valid model response object into the persisted prediction fields."""
+    if not isinstance(value, dict):
+        return None
+    direction = str(value.get("prediction", "")).upper()
+    if direction not in {"UP", "DOWN"}:
+        return None
+    raw_confidence = value.get("confidence")
+    confidence: float | None = None
+    if isinstance(raw_confidence, (int, float, str)) and not isinstance(raw_confidence, bool):
+        try:
+            confidence = float(raw_confidence)
+        except ValueError:
+            pass
+    if confidence is not None and not 0 <= confidence <= 1:
+        confidence = None
+    return direction, confidence, str(value.get("reasoning", fallback)), str(value.get("report", ""))
+
+
 def _parse_prediction(text: str) -> tuple[str, float | None, str, str]:
+    """Parse a prediction even when a provider wraps JSON in reasoning tags."""
+    cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.I | re.S)
     try:
-        value = json.loads(re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.I | re.S))
-        if isinstance(value, dict):
-            confidence = value.get("confidence")
-            report = str(value.get("report", ""))
-            return (str(value.get("prediction", "UNKNOWN")).upper(),
-                    float(confidence) if isinstance(confidence, (int, float)) else None,
-                    str(value.get("reasoning", text)), report)
-    except (ValueError, TypeError, json.JSONDecodeError):
+        parsed = _prediction_from_object(json.loads(cleaned), text)
+        if parsed:
+            return parsed
+    except json.JSONDecodeError:
         pass
+
+    # Some reasoning-capable providers emit the requested object inside
+    # ``<reasoning>``. Decode each object candidate rather than persisting it
+    # verbatim as the short reasoning field.
+    decoder = json.JSONDecoder()
+    for match in re.finditer(r"\{", cleaned):
+        try:
+            value, _ = decoder.raw_decode(cleaned[match.start():])
+        except json.JSONDecodeError:
+            continue
+        parsed = _prediction_from_object(value, text)
+        if parsed:
+            return parsed
+
+    # A provider may stream an otherwise complete object without its final
+    # closing brace. Recover only the known response fields, with JSON string
+    # decoding retained for escaped report content.
+    direction_match = re.search(r'"prediction"\s*:\s*"(UP|DOWN)"', cleaned, re.I)
+    if direction_match:
+        def string_field(name: str) -> str:
+            match = re.search(rf'"{name}"\s*:\s*("(?:\\.|[^"\\])*")', cleaned, re.S)
+            if not match:
+                return ""
+            try:
+                return str(json.loads(match.group(1)))
+            except json.JSONDecodeError:
+                return ""
+
+        confidence_match = re.search(r'"confidence"\s*:\s*(-?(?:\d+(?:\.\d*)?|\.\d+))', cleaned)
+        try:
+            confidence = float(confidence_match.group(1)) if confidence_match else None
+        except ValueError:
+            confidence = None
+        if confidence is not None and not 0 <= confidence <= 1:
+            confidence = None
+        return direction_match.group(1).upper(), confidence, string_field("reasoning") or text, string_field("report")
     return "UNKNOWN", None, text, ""
 
 
@@ -132,7 +185,7 @@ def _save_result(model: str, stock: str, predict_date: str, direction: str,
     path.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-async def build_agent(model_config: dict[str, Any], internal_tool, client, mcp_tools):
+async def build_agent(model_config: dict[str, Any], internal_tool):
     from langchain_openai import ChatOpenAI
     from langgraph.prebuilt import create_react_agent
     from pydantic import SecretStr
@@ -144,7 +197,10 @@ async def build_agent(model_config: dict[str, Any], internal_tool, client, mcp_t
         raise RuntimeError(f"Invalid API configuration for {model_config.get('name', 'model')}")
     model = ChatOpenAI(model=model_id, api_key=SecretStr(api_key),
                        base_url=model_config.get("openai_base_url"), temperature=0)
-    return create_react_agent(model, [internal_tool, *mcp_tools])
+    # Reports are persisted by this module after parsing the final response.
+    # Do not expose the writer to the model: it otherwise chooses arbitrary
+    # paths and may save a report before its structured response is complete.
+    return create_react_agent(model, [internal_tool])
 
 
 async def predict_stock(stock_code: str | None = None, start_date: str | None = None,
@@ -191,7 +247,7 @@ async def predict_stock(stock_code: str | None = None, start_date: str | None = 
             key = f"{stock}:{label}"
             try:
                 print(f"预测进行中：{stock}，模型：{label}...")
-                agent = await build_agent(config, query_stock_data, session, mcp_tools)
+                agent = await build_agent(config, query_stock_data)
                 prompt = f"""你是一名股票技术分析专家。请先使用内部工具 query_stock_data 读取股票 {stock} 截止 {latest_date} 的最近 {lookback} 个交易日数据。
 预测日期为 {predict_date}（下一个交易日）。只能依据工具返回的数据，不得编造任何价格、成交量或日期。
 额外要求：{additional_prompt}

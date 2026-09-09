@@ -15,6 +15,7 @@ from backend.services.mcp_tools import list_tools
 from backend.services.models import list_models
 from backend.services.predictions import read_predictions
 from backend.services.prompts import read_prompt
+from backend.services.reports import read_report
 from backend.services.stocks import list_symbols, read_stock
 
 app = FastAPI(title="Agent Stock Predict API", version="0.1.0")
@@ -57,6 +58,16 @@ def predictions(symbol: str | None = Query(None), model: str | None = Query(None
 @app.get("/api/prompts")
 def prompts():
     return read_prompt()
+
+@app.get("/api/reports")
+def reports(symbol: str = Query(...), model: str = Query(...), predict_date: str = Query(...)):
+    try:
+        return {"symbol": symbol, "model": model, "predict_date": predict_date,
+                "content": read_report(symbol, model, predict_date)}
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
 
 
 FRONT_DIR = WEB_DIR / "front"

@@ -13,9 +13,17 @@
     "prediction": "DOWN",
     "confidence": 0.68,
     "reasoning": "高点30.28后回落约15%，跌破26.2-26.4平台，9/7地量阴线收25.8创新低，均线压制、反弹乏力，趋势向下。",
+    "actual": "FLAT",
+    "correct": false,
+    "created_at": "2026-09-07 18:19:31"
+  },
+  {
+    "predict_date": "20260909",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "地量十字星企稳于25.4-25.8强支撑，抛压衰竭、双底成形，超跌反弹概率大；目标26.4-26.7，跌破25.4失效。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-07 18:19:31"
+    "created_at": "2026-09-08 17:08:10"
   }
 ]
-

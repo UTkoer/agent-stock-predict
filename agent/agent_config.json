@@ -3,7 +3,7 @@
         "predict_date": "auto",
         "predict_stocks": "default_symbols",
         "addtional_prompt": "default_prompt",
-        "lookback_days": 30
+        "lookback_days": 15
     },
     "models":
     [

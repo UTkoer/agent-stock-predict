@@ -13,8 +13,17 @@
     "prediction": "UP",
     "confidence": 0.62,
     "reasoning": "三连阳收盘创5日新高，45.4元双底支撑有效，地量39.4万手显示抛压枯竭，短线看涨修复至47.3-47.6元。跌破45.3元失效。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-07 18:22:49"
+  },
+  {
+    "predict_date": "20260909",
+    "prediction": "DOWN",
+    "confidence": 0.64,
+    "reasoning": "缩量弱反弹后9/8放量收阴并吞没阳线，高点持续下移逼近45.36支撑，量价偏空，弱势下行概率大，看跌。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-07 18:22:49"
+    "created_at": "2026-09-08 17:26:19"
   }
 ]

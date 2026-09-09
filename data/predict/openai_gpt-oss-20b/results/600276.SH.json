@@ -13,8 +13,17 @@
     "prediction": "DOWN",
     "confidence": 0.68,
     "reasoning": "整体下跌趋势未被突破，关键支撑位未被验证，风险高。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-07 18:23:51"
+  },
+  {
+    "predict_date": "20260909",
+    "prediction": "DOWN",
+    "confidence": 0.75,
+    "reasoning": "价格跌破关键支撑，成交量放缓，趋势转弱，预计下跌",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-07 18:23:51"
+    "created_at": "2026-09-08 17:27:29"
   }
 ]

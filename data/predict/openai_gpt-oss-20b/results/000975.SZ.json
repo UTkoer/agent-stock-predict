@@ -13,8 +13,17 @@
     "prediction": "DOWN",
     "confidence": 0.72,
     "reasoning": "跌势持续，成交量回落，已突破关键阻力，缺乏上行动能。",
+    "actual": "FLAT",
+    "correct": false,
+    "created_at": "2026-09-07 18:20:57"
+  },
+  {
+    "predict_date": "20260909",
+    "prediction": "DOWN",
+    "confidence": 0.6,
+    "reasoning": "近期多空交替，成交量低迷，价格逼近支撑，缺乏突破，预计下跌。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-07 18:20:57"
+    "created_at": "2026-09-08 17:10:58"
   }
 ]

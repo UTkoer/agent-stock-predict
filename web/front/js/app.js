@@ -59,7 +59,8 @@ function render() {
   const prediction = state.predictions.find((item) => item.predict_date === selectedDate) || state.predictions[0];
   if (!prediction) { $('#predictionCard').innerHTML = '<div class="empty">暂无预测结果</div>'; return; }
   $('#coverage').textContent = `${prediction.model} · ${prediction.stock_code}`;
-  $('#predictionCard').innerHTML = `<div class="signal"><div class="direction">${prediction.prediction || '--'}</div><div><div class="confidence">置信度 ${prediction.confidence ?? '--'}</div><div class="meta"><span>预测日 ${prediction.predict_date}</span>${verificationBadge(prediction.correct)}</div></div></div><p class="reasoning">${prediction.reasoning || '暂无分析说明'}</p>`;
+  $('#predictionCard').innerHTML = `<div class="prediction-tabs"><button class="prediction-tab active" type="button" data-view="summary">预测摘要</button><button class="prediction-tab" type="button" data-view="report">MD分析报告</button></div><div class="prediction-view" data-prediction-summary><div class="signal"><div class="direction">${prediction.prediction || '--'}</div><div><div class="confidence">置信度 ${prediction.confidence ?? '--'}</div><div class="meta"><span>预测日 ${prediction.predict_date}</span>${verificationBadge(prediction.correct)}</div></div></div><p class="reasoning">${prediction.reasoning || '暂无分析说明'}</p></div><div class="prediction-view report-view" data-prediction-report hidden><div class="empty">点击“MD分析报告”加载报告</div></div>`;
+  if (window.setupReportView) window.setupReportView(prediction);
   $('#stockRows').innerHTML = state.rows.slice(-30).reverse().map((row) => {
     const change = Number(row.pct_chg);
     const className = change > 0 ? 'rise' : change < 0 ? 'fall' : '';
