@@ -39,7 +39,7 @@ pip install -r requirements.txt
     ]
 }
 ```
-<br>
+
 
 可以直接在数组中新增标的分组:
 ```json
@@ -59,7 +59,6 @@ pip install -r requirements.txt
 ---
 ### 4. 下载股票数据
 项目默认采用`tushare`和`akshare`两类数据源,优先调用`tushare`,调用失败后再自动切换使用`akshare`. 使用`tushare`数据源前请在`.env`中配置`TUSHARE_TOKEN`.
-<br>
 ##### 数据下载:
 进入目录`agent-stock-predict\data\`:
 - 不带参数运行:
@@ -67,13 +66,13 @@ pip install -r requirements.txt
     python get_data.py
     ```
     这将下载`symbols.json`中所有股票从**本日**止默认**30**个交易日的日线数据.
-<br>
+
 - 指定起止时间运行:
     ```
     python get_data.py --start-date 20260801 --end-date 20260831
-    ``` 
+    ```
     这将下载从**2026年8月1日**到**2026年8月31日**内所有交易日的日线数据.
-<br>
+  
 - 指定起始时间运行:
     ```
     python get_data.py --start-date 20260101
