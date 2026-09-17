@@ -1,7 +1,7 @@
 {
 
     "rule_config": {
-        "predict_date": "auto",
+        "predict_date": "today",
         "predict_stocks":"default_symbols",
         "addtional_prompt": "default_prompt",
         "lookback_days":30

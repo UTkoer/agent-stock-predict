@@ -22,8 +22,44 @@
     "prediction": "UP",
     "confidence": 0.62,
     "reasoning": "地量十字星企稳于25.4-25.8强支撑，抛压衰竭、双底成形，超跌反弹概率大；目标26.4-26.7，跌破25.4失效。",
+    "actual": "UP",
+    "correct": true,
+    "created_at": "2026-09-08 17:08:10"
+  },
+  {
+    "predict_date": "20260910",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "连续三日缩量至均量六成附近，0909下探25.41后收阳线站回25.98，空头动能衰竭；缩量止跌+锤子反包，突破26.35概率大，跌破25.40失效。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-10 17:03:46"
+  },
+  {
+    "predict_date": "20260911",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "股价自29.26回调后于25.8-26.0窄幅横盘，9/10量降至21.7万手创25日新低，缩量回踩、25.41支撑未破，抛压衰竭，短线有望反弹至26.35-26.60。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-11 12:19:52"
+  },
+  {
+    "predict_date": "20260916",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "0915缩量至22.4万手为地量，0911以来低点24.59→24.93→25.37逐级抬高，抛压衰竭，缩量回踩属良性；目标26.35，跌破24.59判断失效。",
+    "actual": "UP",
+    "correct": true,
+    "created_at": "2026-09-16 12:47:32"
+  },
+  {
+    "predict_date": "20260917",
+    "prediction": "UP",
+    "confidence": 0.66,
+    "reasoning": "0916放量长阳+4.20%，实体吞没前两日并站上5日、10日均线，量能升至37.1万手；此前24.59-24.93双底确认支撑，短期动量转多，看涨。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-08 17:08:10"
+    "created_at": "2026-09-17 14:34:18"
   }
 ]

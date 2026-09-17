@@ -22,8 +22,44 @@
     "prediction": "DOWN",
     "confidence": 0.7,
     "reasoning": "近期多空交替，成交量放大，价格跌破关键支撑，趋势转弱，预计下跌。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-08 17:31:33"
+  },
+  {
+    "predict_date": "20260910",
+    "prediction": "DOWN",
+    "confidence": 0.68,
+    "reasoning": "近期收盘持续下行，成交量低迷，缺乏上行动能，明显看跌。",
+    "actual": "UP",
+    "correct": false,
+    "created_at": "2026-09-10 17:12:05"
+  },
+  {
+    "predict_date": "20260911",
+    "prediction": "UP",
+    "confidence": 0.78,
+    "reasoning": "价格突破关键阻力，成交量放大，趋势向上，预计上涨",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-11 12:32:43"
+  },
+  {
+    "predict_date": "20260916",
+    "prediction": "DOWN",
+    "confidence": 0.75,
+    "reasoning": "价格跌破关键支撑，成交量持续走弱，短期趋势明显下行，预计继续下跌。",
+    "actual": "UP",
+    "correct": false,
+    "created_at": "2026-09-16 12:52:06"
+  },
+  {
+    "predict_date": "20260917",
+    "prediction": "DOWN",
+    "confidence": 0.7,
+    "reasoning": "价格处于低位，连续下跌，成交量高，缺乏上行动能，预计下跌。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-08 17:31:33"
+    "created_at": "2026-09-17 14:43:25"
   }
 ]

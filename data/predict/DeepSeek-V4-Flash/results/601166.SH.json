@@ -22,8 +22,44 @@
     "prediction": "UP",
     "confidence": 0.62,
     "reasoning": "放量探底后低点逐级抬高，站回18元，均线转多逼近阻力区；若放量突破18.3则上看18.5，但最新反弹量能萎缩略压置信。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-08 17:11:28"
+  },
+  {
+    "predict_date": "20260910",
+    "prediction": "UP",
+    "confidence": 0.6,
+    "reasoning": "缩量回踩18.0支撑，股价站上MA5/MA10/MA20，MA5上穿MA10，17.42见底后重心上移，抛压衰竭，看涨至18.34，失守17.95则判断失效。",
+    "actual": "UP",
+    "correct": true,
+    "created_at": "2026-09-10 17:05:47"
+  },
+  {
+    "predict_date": "20260911",
+    "prediction": "UP",
+    "confidence": 0.63,
+    "reasoning": "8/28放量急跌后缩量修复，18.00支撑四度验证，9/10缩量阳线创四日新高，逼近18.34阻力，看涨突破，目标18.50，跌破18.00失效。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-11 12:22:26"
+  },
+  {
+    "predict_date": "20260916",
+    "prediction": "DOWN",
+    "confidence": 0.62,
+    "reasoning": "收盘17.92失守MA5/MA10，高点逐级下移，18.24-18.34阻力反复受阻，尾盘杀跌指向17.81-17.74支撑。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-16 12:48:43"
+  },
+  {
+    "predict_date": "20260917",
+    "prediction": "DOWN",
+    "confidence": 0.68,
+    "reasoning": "9月15-16日连破18.00平台，高点逐级下移，MA5下穿MA10，收盘17.80失守均线，缩量下跌无承接，短线惯性走弱，目标17.50。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-08 17:11:28"
+    "created_at": "2026-09-17 14:38:25"
   }
 ]

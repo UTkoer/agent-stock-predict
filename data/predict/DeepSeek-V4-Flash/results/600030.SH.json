@@ -14,7 +14,7 @@
     "confidence": 0.62,
     "reasoning": "多次上攻28元阻力未果，9/7高开低走收长上影阴线于日内低位，量能萎缩上行动能衰竭，短期看空回踩27.46-27.40支撑。",
     "actual": "DOWN",
-    "correct": false,
+    "correct": true,
     "created_at": "2026-09-07 18:24:19"
   },
   {
@@ -22,8 +22,44 @@
     "prediction": "DOWN",
     "confidence": 0.62,
     "reasoning": "连续阴跌且收盘贴近低位，跌破5/10日均线，28上方多重顶压制，短期动量转空，看下探27.0-27.28支撑。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-08 17:28:25"
+  },
+  {
+    "predict_date": "20260910",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "三连阴后缩量止跌，量能萎缩至区间地量72万手，27.17支撑有效，小实体收阳，抛压衰竭，次日技术性反抽，目标27.90，失守27.15则判断失效。",
+    "actual": "UP",
+    "correct": true,
+    "created_at": "2026-09-10 17:11:31"
+  },
+  {
+    "predict_date": "20260911",
+    "prediction": "UP",
+    "confidence": 0.65,
+    "reasoning": "9/7-9/9缩量回调止于27.17，9/9量缩至72万手地量，9/10放量涨0.99%收27.60近全天高点，反包前两日失地，量价转强，目标28.05，跌破27.21失效。",
+    "actual": "DOWN",
+    "correct": false,
+    "created_at": "2026-09-11 12:25:36"
+  },
+  {
+    "predict_date": "20260916",
+    "prediction": "DOWN",
+    "confidence": 0.66,
+    "reasoning": "9月4日见高28.33后近7日6跌，收盘26.35创区间新低且收于当日低位，9月11日放量破位后缩量阴跌无承接，动量明确向下，下看26.00，站回26.80判断失效。",
+    "actual": "UP",
+    "correct": false,
+    "created_at": "2026-09-16 12:50:51"
+  },
+  {
+    "predict_date": "20260917",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "连续6日下跌后0916收长下影缩量小阳，26.08止跌、收盘26.45收复前收，量降至81万手显抛压衰竭，短线技术反弹，目标26.75-26.92，跌破26.08失效。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-08 17:28:25"
+    "created_at": "2026-09-17 14:42:02"
   }
 ]

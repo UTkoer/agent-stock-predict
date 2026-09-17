@@ -22,8 +22,44 @@
     "prediction": "DOWN",
     "confidence": 0.64,
     "reasoning": "缩量弱反弹后9/8放量收阴并吞没阳线，高点持续下移逼近45.36支撑，量价偏空，弱势下行概率大，看跌。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-08 17:26:19"
+  },
+  {
+    "predict_date": "20260910",
+    "prediction": "DOWN",
+    "confidence": 0.75,
+    "reasoning": "24日跌约18%，9日放量716944手跌破45.36支撑并收于区间最低44.71，反弹缩量、反弹高点逐级下移，空头结构完整，次日看跌，目标44.00元，站上45.71元失效。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-10 17:07:19"
+  },
+  {
+    "predict_date": "20260911",
+    "prediction": "DOWN",
+    "confidence": 0.78,
+    "reasoning": "三连阴放量破位，跌穿45.36平台并创25日新低，均线空头排列，动量加速向下，短线大概率下探42元附近。",
+    "actual": "DOWN",
+    "correct": true,
+    "created_at": "2026-09-11 12:24:22"
+  },
+  {
+    "predict_date": "20260916",
+    "prediction": "UP",
+    "confidence": 0.62,
+    "reasoning": "连跌后0915收地量十字星(375,735手)，抛压衰竭；42.82元支撑三日有效，低点抬高，短线超跌反弹。看涨，目标44.7元，失效价42.82元。",
+    "actual": "UP",
+    "correct": true,
+    "created_at": "2026-09-16 12:49:39"
+  },
+  {
+    "predict_date": "20260917",
+    "prediction": "UP",
+    "confidence": 0.65,
+    "reasoning": "三日缩量止跌，09/16收阳43.52创近4日收盘新高并站上5日均线43.08，抛压衰竭；目标44.40-44.70，跌破42.67判断失效。",
     "actual": null,
     "correct": null,
-    "created_at": "2026-09-08 17:26:19"
+    "created_at": "2026-09-17 14:40:04"
   }
 ]

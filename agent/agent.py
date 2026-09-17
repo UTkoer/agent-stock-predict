@@ -21,9 +21,16 @@ STOCKS_DIR = PROJECT_ROOT / "data" / "stocks"
 PREDICT_DIR = PROJECT_ROOT / "data" / "predict"
 
 
+def _next_weekday(value: date) -> date:
+    """Return the next weekday; local market data validates same-day runs."""
+    candidate = value + timedelta(days=1)
+    while candidate.weekday() >= 5:
+        candidate += timedelta(days=1)
+    return candidate
+
+
 def default_date_range() -> tuple[str, str]:
-    # ``auto`` means the next calendar day (the day being predicted).
-    end = date.today() + timedelta(days=1)
+    end = _next_weekday(date.today())
     return (end - timedelta(days=30)).strftime("%Y%m%d"), end.strftime("%Y%m%d")
 
 
@@ -43,7 +50,7 @@ def load_enabled_models() -> list[dict[str, Any]]:
     return enabled
 
 
-def resolve_prediction_config() -> tuple[str, list[str], str, int]:
+def resolve_prediction_config() -> tuple[str, list[str], str, int, str]:
     """Resolve rule_config before any model or MCP process is started."""
     # Runtime rules live in the project-level config.json; retain a fallback
     # to agent_config.json for backwards compatibility.
@@ -53,8 +60,18 @@ def resolve_prediction_config() -> tuple[str, list[str], str, int]:
     prompts_config = _load_json(PROMPTS_CONFIG)
     if not isinstance(rules, dict):
         raise ValueError("rule_config must be an object")
-    date_rule = rules.get("predict_date", "auto")
-    predict_date = (date.today() + timedelta(days=1)).strftime("%Y%m%d") if date_rule == "auto" else str(date_rule)
+    date_rule = str(rules.get("predict_date", "next")).lower()
+    if date_rule == "auto":
+        date_rule = "next"
+    if date_rule == "next":
+        predict_date = _next_weekday(date.today()).strftime("%Y%m%d")
+    elif date_rule == "today":
+        predict_date = date.today().strftime("%Y%m%d")
+    elif re.fullmatch(r"\d{8}", date_rule):
+        predict_date = date_rule
+        date_rule = "explicit"
+    else:
+        raise ValueError("predict_date must be next, today, or YYYYMMDD")
     datetime.strptime(predict_date, "%Y%m%d")
     stock_rule = rules.get("predict_stocks", "default_symbols")
     symbols = symbols_config.get("default_symbols", []) if stock_rule == "default_symbols" else stock_rule
@@ -67,7 +84,14 @@ def resolve_prediction_config() -> tuple[str, list[str], str, int]:
     lookback = rules.get("lookback_days", 30)
     if not isinstance(lookback, int) or lookback <= 0:
         raise ValueError("lookback_days must be a positive integer")
-    return predict_date, symbols, prompt, lookback
+    return predict_date, symbols, prompt, lookback, date_rule
+
+
+def ensure_today_is_trading_day(predict_date: str) -> None:
+    """Reject weekends without requiring same-day market data."""
+    current_day = datetime.strptime(predict_date, "%Y%m%d").date()
+    if current_day.weekday() >= 5:
+        raise RuntimeError(f"Today ({predict_date}) is not a trading day; prediction stopped.")
 
 
 def _safe_name(value: str) -> str:
@@ -208,9 +232,11 @@ async def predict_stock(stock_code: str | None = None, start_date: str | None = 
     from langchain_core.tools import tool
 
     print("Reading prediction configuration...")
-    config_date, config_symbols, additional_prompt, lookback = resolve_prediction_config()
+    config_date, config_symbols, additional_prompt, lookback, date_mode = resolve_prediction_config()
     predict_date = end_date or config_date
     symbols = [stock_code] if stock_code else config_symbols
+    if end_date is None and date_mode == "today":
+        ensure_today_is_trading_day(predict_date)
     print(f"Loaded {len(symbols)} stock symbol(s); lookback: {lookback} days.")
 
     @tool
